@@ -1,15 +1,13 @@
-package com.hdc.eduservice;
+package com.hdc.oss;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.hdc"})
-public class EduApplication {
-
+public class OssApplication {
     public static void main(String[] args) {
-        SpringApplication.run(EduApplication.class, args);
+        SpringApplication.run(OssApplication.class, args);
     }
 }
