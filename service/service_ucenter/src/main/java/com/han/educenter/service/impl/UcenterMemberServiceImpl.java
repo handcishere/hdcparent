@@ -27,6 +27,17 @@ import org.springframework.stereotype.Service;
 public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, UcenterMember> implements UcenterMemberService {
     @Autowired
     private RedisTemplate<String,String> redisTemplate;
+
+    @Override
+    public UcenterMember getByOpenid(String openid) {
+
+        QueryWrapper<UcenterMember> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("openid", openid);
+
+        UcenterMember member = baseMapper.selectOne(queryWrapper);
+        return member;
+    }
+
     @Override
     public String login(UcenterMember member) {
         String mobile = member.getMobile();

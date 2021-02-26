@@ -14,6 +14,9 @@ import com.han.educenter.entity.vo.RegisterVo;
  */
 public interface UcenterMemberService extends IService<UcenterMember> {
 
+    UcenterMember getByOpenid(String openid) ;
+
+
     String login(UcenterMember member);
 
     void register(RegisterVo register);
